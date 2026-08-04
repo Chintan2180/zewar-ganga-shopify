@@ -71,12 +71,12 @@
     "variant_button_width": "default-width-buttons",
     "content_for_index": [],
     "color_palette": {
-      "background": "#ffffff",
-      "foreground": "#000000",
-      "color1": "#c3cca6",
-      "color2": "#adc4c2",
-      "color3": "#fdc656",
-      "color4": "#F1EDE8"
+      "background": "#FAF7F2",
+      "foreground": "#1D1714",
+      "color1": "#A38048",
+      "color2": "#0D2A1F",
+      "color3": "#C6A366",
+      "color4": "#EFECE5"
     }
   },
   "presets": {
@@ -140,12 +140,12 @@
       "variant_button_width": "default-width-buttons",
       "popover_border_color": "{{ settings.color_palette.color1 }}",
       "color_palette": {
-        "background": "#ffffff",
-        "foreground": "#000000",
-        "color1": "#c3cca6",
-        "color2": "#adc4c2",
-        "color3": "#fdc656",
-        "color4": "#F1EDE8"
+        "background": "#FAF7F2",
+        "foreground": "#1D1714",
+        "color1": "#A38048",
+        "color2": "#0D2A1F",
+        "color3": "#C6A366",
+        "color4": "#EFECE5"
       }
     }
   }

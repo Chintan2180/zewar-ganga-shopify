@@ -1,0 +1,194 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_direction": "column",
+        "gap": 32,
+        "background_color": "{{ settings.color_palette.background }}",
+        "padding-block-start": 40,
+        "padding-block-end": 40
+      }
+    },
+    "showroom_intro": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"showroom-intro\" style=\"text-align: center; max-width: 800px; margin: 0 auto 40px auto; padding: 20px; font-family: var(--font-body-family);\"><p style=\"font-size: 1.25rem; line-height: 1.6; color: #1D1714;\">Welcome to the Zewar Ganga Digital Showroom. Here you can browse our exclusive Gold and Silver collections. To purchase or customize any piece, connect directly with our showroom team.</p><div style=\"margin-top: 30px; display: flex; justify-content: center; gap: 20px;\"><a href=\"https://wa.me/919999999999\" target=\"_blank\" style=\"background-color: #0D2A1F; color: #FAF7F2; padding: 12px 28px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #FAF7F2; transition: all 0.3s ease;\">💬 Inquire on WhatsApp</a><a href=\"tel:+919999999999\" style=\"background-color: #FAF7F2; color: #1D1714; padding: 12px 28px; text-decoration: none; font-weight: bold; border-radius: 4px; border: 1px solid #1D1714; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease;\">📞 Call Store</a></div></div>",
+        "background_color": "#FAF7F2",
+        "section_width": "page-width",
+        "padding-block-start": 20,
+        "padding-block-end": 40
+      }
+    },
+    "gold_showroom_grid": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "Gold Showroom Header",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "gap": 8,
+            "width": "fill"
+          },
+          "blocks": {
+            "title": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>✨ Luxury Gold Jewelry Catalog</h2><p>100% BIS 916 Hallmarked Purity</p>",
+                "type_preset": "rte",
+                "width": "fit-content",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "title"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4
+          },
+          "blocks": {
+            "product-card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt"
+              }
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "fit-content",
+                "alignment": "center",
+                "type_preset": "paragraph",
+                "font_size": "1.1rem"
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "type_preset": "h6",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "product-card-gallery",
+            "product_title",
+            "price"
+          ]
+        }
+      },
+      "block_order": [],
+      "settings": {
+        "collection": "gold-jewelry",
+        "layout_type": "grid",
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 16,
+        "rows_gap": 32,
+        "section_width": "page-width",
+        "background_color": "#FAF7F2",
+        "padding-block-start": 40,
+        "padding-block-end": 60
+      }
+    },
+    "silver_showroom_grid": {
+      "type": "product-list",
+      "blocks": {
+        "static-header": {
+          "type": "_product-list-content",
+          "name": "Silver Showroom Header",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "gap": 8,
+            "width": "fill"
+          },
+          "blocks": {
+            "title": {
+              "type": "_product-list-text",
+              "settings": {
+                "text": "<h2>🥈 Certified Fine Silver Catalog</h2><p>999 Certified Purity Bullion & Ornaments</p>",
+                "type_preset": "rte",
+                "width": "fit-content",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "title"
+          ]
+        },
+        "static-product-card": {
+          "type": "_product-card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 4
+          },
+          "blocks": {
+            "product-card-gallery": {
+              "type": "_product-card-gallery",
+              "settings": {
+                "image_ratio": "adapt"
+              }
+            },
+            "product_title": {
+              "type": "product-title",
+              "settings": {
+                "width": "fit-content",
+                "alignment": "center",
+                "type_preset": "paragraph",
+                "font_size": "1.1rem"
+              }
+            },
+            "price": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "type_preset": "h6",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "product-card-gallery",
+            "product_title",
+            "price"
+          ]
+        }
+      },
+      "block_order": [],
+      "settings": {
+        "collection": "silver-jewelry",
+        "layout_type": "grid",
+        "max_products": 8,
+        "columns": 4,
+        "mobile_columns": "2",
+        "columns_gap": 16,
+        "rows_gap": 32,
+        "section_width": "page-width",
+        "background_color": "#FAF7F2",
+        "padding-block-start": 40,
+        "padding-block-end": 60
+      }
+    }
+  },
+  "order": [
+    "main",
+    "showroom_intro",
+    "gold_showroom_grid",
+    "silver_showroom_grid"
+  ]
+}
