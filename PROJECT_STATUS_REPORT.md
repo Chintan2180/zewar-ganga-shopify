@@ -37,12 +37,13 @@ This report documents the current implementation status of the **Ganga Jewellers
 ### A. Storefront Architecture & Design System (Phase 1)
 * **Framework:** Modern Shopify Online Store 2.0 (OS 2.0) modular Liquid architecture with section-block hierarchy.
 * **Typography:** Premium dual-type system utilizing `Instrument Serif` (for luxury headers & accents) and `Instrument Sans` (for clean, legible body text).
-* **Curated Color Palette:**
-  * Background: `#FAF7F2` (Warm Pearl / Off-White)
-  * Foreground / Text: `#1D1714` (Deep Charcoal / Onyx)
-  * Primary Accent: `#A38048` (Antique Gold)
-  * Secondary Accent: `#0D2A1F` (Royal Emerald Green)
-  * Badge / Highlight: `#C6A366` (Champagne Gold)
+* **Curated Color Palette (Ultra-Luxury Gold & Fine Jewellery Aesthetic):**
+  * Background: `#FAF8F5` (Warm Alabaster Silk / Ivory Pearl)
+  * Foreground / Text: `#161312` (Obsidian Noir / Velvet Charcoal)
+  * Primary Accent: `#C5A059` (Radiant 22K Royal Gold)
+  * Secondary Accent: `#58111A` (Imperial Ruby / Heritage Royal Burgundy — Tanishq/Kalyan luxury aesthetic)
+  * Badge / Highlight: `#DFBD76` (Luminous Champagne Gold)
+  * Borders / Dividers: `#ECE5DA` (Warm Pearl Sand)
 * **Custom Digital Showroom Page (`templates/page.showroom.json`):** Dedicated high-ticket inquiry landing page with direct WhatsApp and phone consultation triggers.
 * **Product Detail Page (`templates/product.json`):** Dynamic variant selectors for gold purities (24K, 22K 916 BIS, 18K), chain lengths, ring sizes, BIS Hallmark trust markers, and expandable accordion care disclosures.
 * **Collection Page (`templates/collection.json`):** Responsive faceted filter system (filter by metal type, purity, price) with density controls.
