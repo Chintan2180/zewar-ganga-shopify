@@ -10,16 +10,17 @@ This guide contains step-by-step instructions for team members and managers to c
 > **Do not share personal Google/Shopify accounts.**  
 > The manager should use **their own email address**. The store owner or lead developer will invite them as a Staff member or Collaborator.
 
-### How to Grant the Manager Access:
-1. The Store Owner goes to **Shopify Admin** -> **Settings** (bottom left) -> **Users and permissions**.
-2. Click **Add staff** (or Collaborator).
-3. Enter the manager's email address.
-4. Grant permissions:
-   * **Online Store** (Themes, Blog posts, Pages, Navigation)
+### How to Grant the Manager Access (Organization Account):
+1. In **Shopify Admin**, click **Settings** (bottom left).
+2. In the left sidebar under *Zewar Ganga Dev Organization*, click **Users** (you are on this page).
+3. Click the black **"Add users"** button in the **top-right corner** of the page.
+4. Enter the manager's email address.
+5. Select the store (`zewar-ganga-golds-silver-5y1mpz5b`) and assign their role / permissions:
+   * **Themes**
    * **Products & Collections**
-   * (Optional) **Settings**
-5. Send the invitation.
-6. **The manager must accept the email invite and create/log into their Shopify account before proceeding.**
+   * **Settings**
+6. Send the invitation.
+7. **The manager accepts the email invite to create their account and log in via the CLI.**
 
 ---
 
