@@ -1,0 +1,134 @@
+{%- doc -%}
+  Renders Tanishq-style luxury 'Diamonds' mega menu with visual category cards,
+  automatic Shopify collection image integration, and comprehensive subcategories.
+{%- enddoc -%}
+
+<div class="tanishq-mega-menu section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
+  <div class="tanishq-mega-menu__container">
+
+    <!-- Top Visual Category Cards Row (With Images) -->
+    <div class="tanishq-visual-grid" style="grid-template-columns: repeat(6, 1fr); margin-bottom: 24px;">
+      
+      <!-- Card 1: Diamond Rings -->
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1600003014755-ba31aa59c4b6.jpg?v=1785216005&width=360" alt="Diamond Rings" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Diamond Rings</span>
+      </a>
+
+      <!-- Card 2: Diamond Earrings -->
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/elegant-18k-gold-jhumka-earrings.png?v=1785217640&width=360" alt="Diamond Earrings" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Diamond Earrings</span>
+      </a>
+
+      <!-- Card 3: Diamond Necklaces -->
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1599643478518-a784e5dc4c8f.jpg?v=1785215967&width=360" alt="Diamond Necklaces" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Diamond Necklaces</span>
+      </a>
+
+      <!-- Card 4: Diamond Pendants -->
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1561414927-6d86591d0c4f.jpg?v=1785145110&width=360" alt="Diamond Pendants" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Diamond Pendants</span>
+      </a>
+
+      <!-- Card 5: Diamond Mangalsutra -->
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1506630448388-4e683c67ddb0.jpg?v=1785216018&width=360" alt="Diamond Mangalsutra" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Mangalsutra</span>
+      </a>
+
+      <!-- Card 6: Diamond Bangles -->
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1610375461246-83df859d849d.jpg?v=1785145018&width=360" alt="Diamond Bangles" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Bangles &amp; Bracelets</span>
+      </a>
+
+    </div>
+
+    <!-- Subcategories Grid (Men, Women, Kids & Teens + Certified Card) -->
+    <div class="tanishq-mega-menu__columns" style="grid-template-columns: 1.1fr 1.5fr 1.3fr 1.4fr; padding-top: 16px; border-top: 1px solid #ECE5DA;">
+      
+      <!-- Men's Diamond Column -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">👔</span>
+          <span class="tanishq-col__heading-text">Men's Diamonds</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link tanishq-col__link--all">All Men's Diamonds</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Bracelets</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Earrings</a></li>
+        </ul>
+      </div>
+
+      <!-- Women's Diamond Column -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">✨</span>
+          <span class="tanishq-col__heading-text">Women's Diamonds</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link tanishq-col__link--all">All Women's Diamonds</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Earrings</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Necklace</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Pendants</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Bangles</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Necklaces</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Bracelets</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Mangalsutra</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Nose Pin</a></li>
+        </ul>
+      </div>
+
+      <!-- Kids & Teens Column -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">⭐</span>
+          <span class="tanishq-col__heading-text">Kids &amp; Teens</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link tanishq-col__link--all">All Kids &amp; Teens</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Earrings</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Diamond Pendants</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Bangles</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Bracelets</a></li>
+          <li><a href="{{ routes.collections_url }}/diamonds" class="tanishq-col__link">Nose Pin</a></li>
+        </ul>
+      </div>
+
+      <!-- Featured Diamond Card -->
+      <div class="tanishq-mega-col tanishq-mega-col--featured">
+        <div class="tanishq-featured-card">
+          <div class="tanishq-featured-card__badge">SGL / IGI Certified</div>
+          <h4 class="tanishq-featured-card__title">Natural Certified Diamonds</h4>
+          <p class="tanishq-featured-card__desc">Flawless cut, brilliant fire, and ethical sourcing in 14K &amp; 18K hallmarked gold.</p>
+          <a href="{{ routes.collections_url }}/diamonds" class="tanishq-featured-card__btn button button--primary">
+            Explore All Diamonds
+          </a>
+          <div class="tanishq-trust-markers">
+            <span class="tanishq-trust-item">✦ 100% Conflict-Free Natural Diamonds</span>
+            <span class="tanishq-trust-item">✦ Lifetime Exchange Guarantee</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

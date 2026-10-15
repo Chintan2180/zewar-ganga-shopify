@@ -1,0 +1,225 @@
+{%- doc -%}
+  Renders Tanishq-style 'Gifting' mega menu with Her, Him, Kids cards and Gift Card highlight matching screenshot.
+{%- enddoc -%}
+
+<div class="tanishq-mega-menu section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
+  <div class="tanishq-mega-menu__container">
+    <div class="tanishq-gifting-grid">
+      
+      <!-- Left Area: Recipient Cards & Celebration Banner -->
+      <div class="tanishq-gifting-left">
+        <!-- Recipient Cards Row: Her, Him, Kids -->
+        <div class="tanishq-recipient-row">
+          
+          <a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-recipient-card">
+            <div class="tanishq-recipient-thumb" style="background: linear-gradient(135deg, #fceceb 0%, #f7d2cf 100%);">
+              <span class="tanishq-recipient-emoji">👩</span>
+            </div>
+            <span class="tanishq-recipient-title">Her</span>
+          </a>
+
+          <a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-recipient-card">
+            <div class="tanishq-recipient-thumb" style="background: linear-gradient(135deg, #edf2f7 0%, #cbd5e0 100%);">
+              <span class="tanishq-recipient-emoji">👨</span>
+            </div>
+            <span class="tanishq-recipient-title">Him</span>
+          </a>
+
+          <a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-recipient-card">
+            <div class="tanishq-recipient-thumb" style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);">
+              <span class="tanishq-recipient-emoji">👶</span>
+            </div>
+            <span class="tanishq-recipient-title">Kids</span>
+          </a>
+
+        </div>
+
+        <!-- Celebration Banner (Matching Tanishq Screenshot) -->
+        <div class="tanishq-celebrate-banner">
+          <div class="tanishq-celebrate-banner__icon">🎁</div>
+          <div class="tanishq-celebrate-banner__text">
+            <h5 class="tanishq-celebrate-banner__title">Celebrate life's joys with Zewar Ganga.</h5>
+            <p class="tanishq-celebrate-banner__subtitle">Find auspicious hallmarked jewellery and precious silver articles for all sacred celebrations.</p>
+          </div>
+          <a href="{{ routes.collections_url }}/gifting" class="tanishq-celebrate-banner__btn">
+            View All
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Area: Digital Gift Card (Matching Tanishq Screenshot) -->
+      <div class="tanishq-gifting-right">
+        <a href="{{ routes.all_products_collection_url }}" class="tanishq-giftcard-box">
+          <div class="tanishq-giftcard-box__header">
+            <span class="tanishq-giftcard-box__title">Gift card</span>
+            <span class="tanishq-giftcard-box__arrow">↗</span>
+          </div>
+          <div class="tanishq-giftcard-box__ribbon"></div>
+          <div class="tanishq-giftcard-box__brand">
+            <span class="tanishq-giftcard-logo-icon">✨</span>
+            <span class="tanishq-giftcard-brand-name">Zewar Ganga</span>
+            <span class="tanishq-giftcard-sub">Precious Gift Card</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  .tanishq-gifting-grid {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+  .tanishq-gifting-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .tanishq-recipient-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .tanishq-recipient-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+  .tanishq-recipient-card:hover {
+    transform: translateY(-4px);
+  }
+  .tanishq-recipient-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border: 1px solid #ECE5DA;
+  }
+  .tanishq-recipient-emoji {
+    font-size: 2.4rem;
+  }
+  .tanishq-recipient-title {
+    font-family: var(--font-body--family, sans-serif);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #161312;
+    margin-top: 8px;
+  }
+  .tanishq-recipient-card:hover .tanishq-recipient-title {
+    color: #58111A;
+  }
+  .tanishq-celebrate-banner {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    background-color: #FFFDF9;
+    border: 1px solid #ECE5DA;
+    border-radius: 10px;
+  }
+  .tanishq-celebrate-banner__icon {
+    font-size: 2rem;
+  }
+  .tanishq-celebrate-banner__text {
+    flex: 1;
+  }
+  .tanishq-celebrate-banner__title {
+    font-family: var(--font-heading--family, 'Instrument Serif', Georgia, serif);
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+    color: #161312;
+  }
+  .tanishq-celebrate-banner__subtitle {
+    font-size: 0.82rem;
+    color: rgba(22,19,18,0.7);
+    margin: 0;
+    line-height: 1.35;
+  }
+  .tanishq-celebrate-banner__btn {
+    padding: 8px 20px;
+    background-color: #58111A;
+    color: #FAF8F5;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 100px;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+  .tanishq-celebrate-banner__btn:hover {
+    background-color: #3b0910;
+  }
+  .tanishq-giftcard-box {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    background: linear-gradient(135deg, #EDE5D8 0%, #DFD3BF 100%);
+    border: 1px solid #C5A059;
+    border-radius: 12px;
+    padding: 24px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(197, 160, 89, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .tanishq-giftcard-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(197, 160, 89, 0.22);
+  }
+  .tanishq-giftcard-box__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tanishq-giftcard-box__title {
+    font-family: var(--font-heading--family, 'Instrument Serif', Georgia, serif);
+    font-size: 1.4rem;
+    color: #58111A;
+    font-weight: 700;
+  }
+  .tanishq-giftcard-box__arrow {
+    font-size: 1.2rem;
+    color: #58111A;
+  }
+  .tanishq-giftcard-box__brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .tanishq-giftcard-logo-icon {
+    font-size: 1.5rem;
+    color: #C5A059;
+  }
+  .tanishq-giftcard-brand-name {
+    font-family: var(--font-heading--family, 'Instrument Serif', Georgia, serif);
+    font-size: 1.2rem;
+    color: #161312;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .tanishq-giftcard-sub {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(22, 19, 18, 0.6);
+  }
+  @media screen and (max-width: 990px) {
+    .tanishq-gifting-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

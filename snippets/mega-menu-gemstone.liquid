@@ -1,0 +1,134 @@
+{%- doc -%}
+  Renders Tanishq-style luxury 'Gemstone' mega menu with visual category cards,
+  Shopify collection image integration, and comprehensive subcategories.
+{%- enddoc -%}
+
+<div class="tanishq-mega-menu section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
+  <div class="tanishq-mega-menu__container">
+
+    <!-- Top Visual Category Cards Row (With Images) -->
+    <div class="tanishq-visual-grid" style="grid-template-columns: repeat(7, 1fr); margin-bottom: 24px;">
+      
+      <!-- Card 1: Emerald (Panna) -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1599643478518-a784e5dc4c8f.jpg?v=1785215967&width=360" alt="Emerald Stone" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Emerald (Panna)</span>
+      </a>
+
+      <!-- Card 2: Ruby (Manik) -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1561414927-6d86591d0c4f.jpg?v=1785145110&width=360" alt="Ruby Stone" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Ruby (Manik)</span>
+      </a>
+
+      <!-- Card 3: Yellow Sapphire (Pukhraj) -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1600003014755-ba31aa59c4b6.jpg?v=1785216005&width=360" alt="Yellow Sapphire" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Yellow Sapphire</span>
+      </a>
+
+      <!-- Card 4: Blue Sapphire (Neelam) -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1506630448388-4e683c67ddb0.jpg?v=1785216018&width=360" alt="Blue Sapphire" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Blue Sapphire</span>
+      </a>
+
+      <!-- Card 5: Gemstone Rings -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1610375461246-83df859d849d.jpg?v=1785145018&width=360" alt="Gemstone Rings" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Gemstone Rings</span>
+      </a>
+
+      <!-- Card 6: Gemstone Earrings -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/elegant-18k-gold-jhumka-earrings.png?v=1785217640&width=360" alt="Gemstone Earrings" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Gemstone Earrings</span>
+      </a>
+
+      <!-- Card 7: Gemstone Pendants -->
+      <a href="{{ routes.collections_url }}/gemstone" class="tanishq-visual-card">
+        <div class="tanishq-visual-card__thumb">
+          <img src="/cdn/shop/files/photo-1599643478518-a784e5dc4c8f.jpg?v=1785215967&width=360" alt="Gemstone Pendants" class="tanishq-visual-card__img" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <span class="tanishq-visual-card__title">Gemstone Pendants</span>
+      </a>
+
+    </div>
+
+    <!-- Subcategories Grid (Columns + Certified Card) -->
+    <div class="tanishq-mega-menu__columns" style="grid-template-columns: 1.3fr 1.3fr 1.3fr 1.4fr; padding-top: 16px; border-top: 1px solid #ECE5DA;">
+      
+      <!-- Column 1: Gemstone Jewellery -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">💚</span>
+          <span class="tanishq-col__heading-text">Gemstone Jewellery</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link tanishq-col__link--all">All Gemstone Jewellery</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Gemstone Earrings</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Gemstone Pendants</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Gemstone Rings</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Precious Gemstones -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">💎</span>
+          <span class="tanishq-col__heading-text">Precious Stones</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link tanishq-col__link--all">Emerald Stone (Panna)</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Ruby (Manik)</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Yellow Sapphire (Pukhraj)</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Blue Sapphire (Neelam)</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Navratna Masterpieces</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Styles & Occasions -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">✨</span>
+          <span class="tanishq-col__heading-text">Designs &amp; Cuts</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Cocktail Gemstone Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Heritage Polki &amp; Emerald Sets</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Solitaire Gemstone Pendants</a></li>
+          <li><a href="{{ routes.collections_url }}/gemstone" class="tanishq-col__link">Astrological Certified Stones</a></li>
+        </ul>
+      </div>
+
+      <!-- Featured Gemstone Card -->
+      <div class="tanishq-mega-col tanishq-mega-col--featured">
+        <div class="tanishq-featured-card">
+          <div class="tanishq-featured-card__badge">100% Certified</div>
+          <h4 class="tanishq-featured-card__title">Certified Precious Gemstones</h4>
+          <p class="tanishq-featured-card__desc">Natural vibrant emeralds, rubies, and sapphires certified for clarity, color, and astrological purity.</p>
+          <a href="{{ routes.collections_url }}/gemstone" class="tanishq-featured-card__btn button button--primary">
+            Explore All Gemstones
+          </a>
+          <div class="tanishq-trust-markers">
+            <span class="tanishq-trust-item">✦ Lab Certified Natural Stones</span>
+            <span class="tanishq-trust-item">✦ 100% BIS Hallmarked Mountings</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

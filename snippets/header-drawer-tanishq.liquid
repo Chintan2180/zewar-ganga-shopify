@@ -1,0 +1,176 @@
+{%- doc -%}
+  Renders Tanishq mobile drawer navigation with all 8 main categories and full sub-items.
+{%- enddoc -%}
+
+<ul class="menu-drawer__menu has-submenu" role="list">
+
+  <!-- 1. All Jewellery -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-all-jewellery">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">All Jewellery</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.all_products_collection_url }}" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #C5A059; font-weight: 700;">Explore All Jewellery (View All)</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Finger Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Nose Pin</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bangles</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Earrings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Mangalsutra</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Necklaces</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bracelets</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Pendants</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Chains</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/wedding-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Necklace Set</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Pendants &amp; Earrings Set</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 2. Gold -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-gold">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">Gold</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #C5A059; font-weight: 700;">All Gold Jewellery</a></li>
+        <li class="menu-drawer__list-item" style="padding-left: 12px; font-weight: 700; color: #58111A; text-transform: uppercase; font-size: 0.8rem; margin-top: 6px;">Men's Collection:</li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Chain</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Ring</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bracelet</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Kadha</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Earpin</a></li>
+        <li class="menu-drawer__list-item" style="padding-left: 12px; font-weight: 700; color: #58111A; text-transform: uppercase; font-size: 0.8rem; margin-top: 10px;">Women's Collection:</li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Earrings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Nose Pins</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bangles</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Chains</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Engagement Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Kadas</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bracelets</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Pendants</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Necklaces</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="font-weight: 600; color: #58111A;">Mangalsutra</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 3. Silvers -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-silvers">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">Silvers</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/silver-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #C5A059; font-weight: 700;">All Silver Jewellery</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/silver-jewelry/Rings" class="menu-drawer__menu-item menu-drawer__menu-item--child">Rings &amp; Bands</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/silver-jewelry/Payal-(or-Anklets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Pure Silver Payal (Anklets)</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/silver-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Silver Bracelets &amp; Kadas</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/coins-bars/Silver" class="menu-drawer__menu-item menu-drawer__menu-item--child">Silver Coins &amp; Bars (999 Purity)</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/silver-jewelry/Utensils-(or-Gifting)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Silver Utensils &amp; Pooja Articles</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 4. Diamonds -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-diamonds">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">Diamonds</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #C5A059; font-weight: 700;">All Diamonds (View All)</a></li>
+        <li class="menu-drawer__list-item" style="padding-left: 12px; font-weight: 700; color: #58111A; text-transform: uppercase; font-size: 0.8rem; margin-top: 6px;">Men's Diamond:</li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Earrings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Bracelets</a></li>
+        <li class="menu-drawer__list-item" style="padding-left: 12px; font-weight: 700; color: #58111A; text-transform: uppercase; font-size: 0.8rem; margin-top: 10px;">Women's Diamond:</li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Earrings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Necklace</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Pendants</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bangles</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Necklaces</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bracelets</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Mangalsutra</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Nose Pin</a></li>
+        <li class="menu-drawer__list-item" style="padding-left: 12px; font-weight: 700; color: #58111A; text-transform: uppercase; font-size: 0.8rem; margin-top: 10px;">Kids &amp; Teens:</li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Earrings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Diamond Pendants</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bangles</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Bracelets</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/diamonds" class="menu-drawer__menu-item menu-drawer__menu-item--child">Nose Pin</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 5. Gemstone -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-gemstone">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">Gemstone</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gemstone" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #C5A059; font-weight: 700;">All Gemstone Jewellery</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gemstone" class="menu-drawer__menu-item menu-drawer__menu-item--child">Gemstone Earrings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gemstone" class="menu-drawer__menu-item menu-drawer__menu-item--child">Gemstone Pendants</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gemstone" class="menu-drawer__menu-item menu-drawer__menu-item--child">Gemstone Rings</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gemstone" class="menu-drawer__menu-item menu-drawer__menu-item--child">Emerald Stone (Panna)</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gemstone" class="menu-drawer__menu-item menu-drawer__menu-item--child">Ruby &amp; Sapphire Stones</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 6. Wedding -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-wedding">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">Wedding</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/wedding-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #C5A059; font-weight: 700;">All Rivaah Wedding</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/wedding-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Wedding Choker</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/wedding-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Wedding Haram</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Wedding Bangles</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.all_products_collection_url }}" class="menu-drawer__menu-item menu-drawer__menu-item--child">Wedding Diamonds Necklace &amp; Sets</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child">Wedding Mangalsutra</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/wedding-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Accessories (Maang Tika, Nathni)</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 7. Gifting -->
+  <li class="menu-drawer__list-item--deep">
+    <details id="Drawer-gifting">
+      <summary class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset">
+        <span class="menu-drawer__menu-item-text wrap-text">Gifting</span>
+        <span class="svg-wrapper icon-plus">{{- 'icon-plus.svg' | inline_asset_content -}}</span>
+      </summary>
+      <ul class="menu-drawer__menu menu-drawer__menu--childlist details-content" role="list">
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Gifts for Her</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Gifts for Him</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gold-jewelry" class="menu-drawer__menu-item menu-drawer__menu-item--child">Gifts for Kids</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.collections_url }}/gifting" class="menu-drawer__menu-item menu-drawer__menu-item--child">Festive &amp; Wedding Gifts</a></li>
+        <li class="menu-drawer__list-item"><a href="{{ routes.all_products_collection_url }}" class="menu-drawer__menu-item menu-drawer__menu-item--child" style="color: #58111A; font-weight: 700;">Digital Gift Card ↗</a></li>
+      </ul>
+    </details>
+  </li>
+
+  <!-- 8. Our Store (Opens pages/showroom in a new tab) -->
+  <li class="menu-drawer__list-item--flat" style="border-top: 1px solid #ECE5DA; margin-top: 10px; padding-top: 8px;">
+    <a href="/pages/showroom" target="_blank" rel="noopener noreferrer" class="menu-drawer__menu-item menu-drawer__menu-item--mainlist focus-inset" style="color: #58111A; font-weight: 700;">
+      <span class="menu-drawer__menu-item-text wrap-text">🏛️ Our Store</span>
+      <span style="font-size: 0.9em; opacity: 0.85;">↗</span>
+    </a>
+  </li>
+
+</ul>

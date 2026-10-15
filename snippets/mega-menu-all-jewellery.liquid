@@ -1,0 +1,83 @@
+{%- doc -%}
+  Renders Tanishq-style 'All Jewellery' mega menu dropdown.
+{%- enddoc -%}
+
+<div class="tanishq-mega-menu section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
+  <div class="tanishq-mega-menu__container">
+    <div class="tanishq-mega-menu__columns">
+      
+      <!-- Column 1: Core Categories -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">💍</span>
+          <span class="tanishq-col__heading-text">Rings &amp; Pins</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.all_products_collection_url }}" class="tanishq-col__link tanishq-col__link--all">All Jewellery</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="tanishq-col__link">Finger Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link">Nose Pin</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="tanishq-col__link">Engagement Rings</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Earrings & Pendants -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">✨</span>
+          <span class="tanishq-col__heading-text">Earrings &amp; Sets</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="tanishq-col__link tanishq-col__link--all">Earrings</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link">Pendants</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link">Pendants &amp; Earrings Set</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="tanishq-col__link">Traditional Jhumkas</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Necklaces & Mangalsutra -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">👑</span>
+          <span class="tanishq-col__heading-text">Necklaces &amp; Chains</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link tanishq-col__link--all">Necklaces</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link">Mangalsutra</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link">Chains</a></li>
+          <li><a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-col__link">Necklace Set</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Bangles & Bracelets -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">💫</span>
+          <span class="tanishq-col__heading-text">Bangles &amp; Wrists</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link tanishq-col__link--all">Bangles</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Bracelets</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Traditional Kadas</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry" class="tanishq-col__link">Silver Bracelets</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 5: Featured Card -->
+      <div class="tanishq-mega-col tanishq-mega-col--featured">
+        <div class="tanishq-featured-card">
+          <div class="tanishq-featured-card__badge">Complete Catalog</div>
+          <h4 class="tanishq-featured-card__title">Explore All Jewellery</h4>
+          <p class="tanishq-featured-card__desc">Discover our comprehensive collection of BIS 916 Hallmarked Gold, Certified Diamonds, and 999 Fine Silver.</p>
+          <a href="{{ routes.all_products_collection_url }}" class="tanishq-featured-card__btn button button--primary">
+            View All Products
+          </a>
+          <div class="tanishq-trust-markers">
+            <span class="tanishq-trust-item">✦ 100% Certified Purity</span>
+            <span class="tanishq-trust-item">✦ Insured Express Delivery Across India</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

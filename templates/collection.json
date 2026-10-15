@@ -74,7 +74,7 @@
             "image_dYcqKa": {
               "type": "image",
               "name": "t:names.image",
-              "disabled": true,
+              "disabled": false,
               "settings": {
                 "image": "{{ closest.collection.image }}",
                 "image_ratio": "adapt",

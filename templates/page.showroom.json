@@ -38,7 +38,7 @@
             "title": {
               "type": "_product-list-text",
               "settings": {
-                "text": "<h2>✨ Luxury Gold Jewelry Catalog</h2><p>100% BIS 916 Hallmarked Purity</p>",
+                "text": "<h2>✨ Luxury Gold Jewellery Catalog</h2><p>100% BIS 916 Hallmarked Purity</p>",
                 "type_preset": "rte",
                 "width": "fit-content",
                 "alignment": "center"

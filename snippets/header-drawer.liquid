@@ -97,6 +97,8 @@
         "
         aria-label="{{ 'accessibility.header_navigation_label' | t }}"
       >
+        {% render 'header-drawer-tanishq', block_settings: block_settings, section: section %}
+        {% if false %}
         <ul
           class="menu-drawer__menu has-submenu"
           role="list"
@@ -108,12 +110,83 @@
             {% assign first_accordion_open = false %}
             {% assign animation_index = 0 %}
             {%- for link in linklist.links -%}
+              {% liquid
+                assign clean_title = link.title | strip | downcase
+                assign is_all_jewellery = false
+                if clean_title == 'home' or link.url == '/' or link.url == routes.root_url or clean_title == 'all jewellery' or clean_title == 'all jewelry'
+                  assign is_all_jewellery = true
+                  assign drawer_link_title = 'All Jewellery'
+                  assign drawer_link_url = routes.all_products_collection_url
+                else
+                  assign drawer_link_title = link.title | replace: 'Jewelry', 'Jewellery' | replace: 'jewelry', 'jewellery'
+                  assign drawer_link_url = link.url
+                endif
+              %}
               {% assign animation_index = animation_index | plus: 1 %}
               <li
                 style="--menu-drawer-animation-index: {{ animation_index }};"
-                class="{%- if block_settings.drawer_accordion -%}menu-drawer__list-item--deep{%- else -%}menu-drawer__list-item--flat{%- endif -%}{% if block_settings.drawer_dividers %} menu-drawer__list-item--divider{% endif %}"
+                class="{%- if block_settings.drawer_accordion or is_all_jewellery -%}menu-drawer__list-item--deep{%- else -%}menu-drawer__list-item--flat{%- endif -%}{% if block_settings.drawer_dividers %} menu-drawer__list-item--divider{% endif %}"
               >
-                {% if block_settings.drawer_accordion and link.links != blank %}
+                {% if is_all_jewellery %}
+                  {% capture all_jewellery_accordion %}
+                    <details id="Details-menu-drawer-all-jewellery">
+                      <summary
+                        id="HeaderDrawer-all-jewellery"
+                        class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset"
+                      >
+                        <span class="menu-drawer__menu-item-text wrap-text">All Jewellery</span>
+                        <span class="svg-wrapper icon-plus">
+                          {{- 'icon-plus.svg' | inline_asset_content -}}
+                        </span>
+                      </summary>
+                      <ul
+                        class="menu-drawer__menu menu-drawer__menu--childlist menu-drawer__animated-element details-content"
+                        role="list"
+                        tabindex="-1"
+                      >
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.all_products_collection_url }}" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset" style="font-weight: 700; color: #C5A059;">
+                            <span class="menu-drawer__menu-item-text wrap-text">Explore All Jewellery (View All)</span>
+                          </a>
+                        </li>
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset">
+                            <span class="menu-drawer__menu-item-text wrap-text">💍 Rings (Gold &amp; Silver)</span>
+                          </a>
+                        </li>
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset">
+                            <span class="menu-drawer__menu-item-text wrap-text">✨ Earrings (Jhumkas &amp; Studs)</span>
+                          </a>
+                        </li>
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset">
+                            <span class="menu-drawer__menu-item-text wrap-text">👑 Necklaces, Chains &amp; Mangalsutra</span>
+                          </a>
+                        </li>
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset">
+                            <span class="menu-drawer__menu-item-text wrap-text">💫 Bangles, Kadas &amp; Bracelets</span>
+                          </a>
+                        </li>
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.collections_url }}/coins-bars" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset">
+                            <span class="menu-drawer__menu-item-text wrap-text">🪙 Gold Coins &amp; Silver Bullion</span>
+                          </a>
+                        </li>
+                        <li class="menu-drawer__list-item">
+                          <a href="{{ routes.collections_url }}/silver-jewelry/Payal-(or-Anklets)" class="menu-drawer__menu-item menu-drawer__menu-item--child focus-inset">
+                            <span class="menu-drawer__menu-item-text wrap-text">🌸 Pure Silver Payal &amp; Articles</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </details>
+                  {% endcapture %}
+                  {% render 'accordion-custom-component',
+                    children: all_jewellery_accordion,
+                    open_by_default_on_mobile: false
+                  %}
+                {% elsif block_settings.drawer_accordion and link.links != blank %}
                   {%- comment -%}
                     Accordion for links with children, in menus with fewer than 3 levels of links
                   {%- endcomment -%}
@@ -132,7 +205,7 @@
                         id="HeaderDrawer-{{ link.handle }}"
                         class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset"
                       >
-                        <span class="menu-drawer__menu-item-text wrap-text">{{ link.title | escape }}</span>
+                        <span class="menu-drawer__menu-item-text wrap-text">{{ drawer_link_title | escape }}</span>
                         <span class="svg-wrapper icon-plus">
                           {{- 'icon-plus.svg' | inline_asset_content -}}
                         </span>
@@ -154,6 +227,7 @@
                         tabindex="-1"
                       >
                         {%- for childlink in link.links -%}
+                          {% assign child_title = childlink.title | replace: 'Jewelry', 'Jewellery' | replace: 'jewelry', 'jewellery' %}
                           <li
                             class="menu-drawer__list-item"
                             style="--menu-drawer-animation-index: {{ forloop.index }};"
@@ -173,7 +247,7 @@
                                   sizes: 'auto, 400px'
                                 %}
                               {% endif %}
-                              <span class="menu-drawer__menu-item-text wrap-text">{{ childlink.title | escape }}</span>
+                              <span class="menu-drawer__menu-item-text wrap-text">{{ child_title | escape }}</span>
                             </a>
                           </li>
                         {%- endfor -%}
@@ -190,13 +264,13 @@
                   {%- endcomment -%}
                   <a
                     id="HeaderDrawer-{{ link.handle }}"
-                    href="{{ link.url }}"
+                    href="{{ drawer_link_url }}"
                     class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset"
                     {% if link.current %}
                       aria-current="page"
                     {% endif %}
                   >
-                    <span class="menu-drawer__menu-item-text wrap-text">{{ link.title | escape }}</span>
+                    <span class="menu-drawer__menu-item-text wrap-text">{{ drawer_link_title | escape }}</span>
                   </a>
                   {% liquid
                     assign render_link_image = false
@@ -215,6 +289,7 @@
                     tabindex="-1"
                   >
                     {%- for childlink in link.links -%}
+                      {% assign child_title = childlink.title | replace: 'Jewelry', 'Jewellery' | replace: 'jewelry', 'jewellery' %}
                       <li
                         class="menu-drawer__list-item"
                         style="--menu-drawer-animation-index: {{ animation_index }};"
@@ -233,7 +308,7 @@
                               sizes: 'auto, 400px'
                             %}
                           {% endif %}
-                          <span class="menu-drawer__menu-item-text wrap-text">{{ childlink.title | escape }}</span>
+                          <span class="menu-drawer__menu-item-text wrap-text">{{ child_title | escape }}</span>
                         </a>
                       </li>
                     {%- endfor -%}
@@ -244,13 +319,13 @@
                   {%- endcomment -%}
                   <a
                     id="HeaderDrawer-{{ link.handle }}"
-                    href="{{ link.url }}"
+                    href="{{ drawer_link_url }}"
                     class="menu-drawer__menu-item menu-drawer__menu-item--mainlist menu-drawer__animated-element focus-inset"
                     {% if link.current %}
                       aria-current="page"
                     {% endif %}
                   >
-                    <span class="menu-drawer__menu-item-text wrap-text">{{ link.title | escape }}</span>
+                    <span class="menu-drawer__menu-item-text wrap-text">{{ drawer_link_title | escape }}</span>
                   </a>
                 {% endif %}
               </li>
@@ -578,6 +653,7 @@
             {%- endfor -%}
           {% endif %}
         </ul>
+        {% endif %}
       </nav>
       <div
         class="menu-drawer__utility-links menu-drawer__animated-element"

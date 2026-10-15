@@ -1,0 +1,538 @@
+{%- doc -%}
+  Comprehensive CSS styling for Tanishq-style luxury mega menus.
+  Ensures solid white/ivory background, crisp multi-column grid, responsive cards, and clean typography.
+{%- enddoc -%}
+
+<style id="tanishq-mega-menu-styles">
+  /* 1. Mega Menu Dropdown Container & Positioning */
+  .menu-list__list-item {
+    position: static !important;
+  }
+
+  .menu-list__list-item > .menu-list__submenu {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    transform: none !important;
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border-top: 1px solid #EFE8DE !important;
+    border-bottom: 3px solid #58111A !important;
+    box-shadow: 0 20px 45px rgba(22, 19, 18, 0.12) !important;
+    z-index: 9999 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    clip-path: none !important;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+  }
+
+  /* Show mega menu on hover or when aria-expanded is true */
+  .menu-list__list-item:hover > .menu-list__submenu,
+  .menu-list__list-item:focus-within > .menu-list__submenu,
+  .menu-list__list-item:has([aria-expanded='true']) > .menu-list__submenu,
+  .menu-list__submenu:hover {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  .menu-list__submenu-inner {
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 2. Core Mega Menu Box Layout */
+  .tanishq-mega-menu {
+    width: 100% !important;
+    background: #FFFFFF !important;
+    padding: 32px 0 38px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .tanishq-mega-menu__container {
+    max-width: 1380px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. Multi-Column Grid */
+  .tanishq-mega-menu__columns {
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 32px !important;
+    align-items: start !important;
+    box-sizing: border-box !important;
+  }
+
+  .tanishq-mega-col {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+  }
+
+  /* 4. Column Headings */
+  .tanishq-col__heading {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-family: var(--font-heading--family, "Playfair Display", Georgia, serif) !important;
+    font-size: 0.98rem !important;
+    font-weight: 700 !important;
+    color: #58111A !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 14px !important;
+    border-bottom: 1px solid #ECE5DA !important;
+    line-height: 1.3 !important;
+  }
+
+  .tanishq-col__heading-icon {
+    font-size: 1.15rem !important;
+    line-height: 1 !important;
+  }
+
+  .tanishq-col__heading-text {
+    flex: 1 !important;
+  }
+
+  /* 5. Column Link Lists */
+  .tanishq-col__list {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .tanishq-col__list li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tanishq-col__link {
+    color: #2D2723 !important;
+    font-size: 0.9rem !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    padding: 3px 0 !important;
+    transition: all 0.18s ease !important;
+    display: inline-block !important;
+    line-height: 1.4 !important;
+  }
+
+  .tanishq-col__link:hover {
+    color: #8C6D37 !important;
+    transform: translateX(4px) !important;
+    font-weight: 600 !important;
+  }
+
+  .tanishq-col__link--all {
+    font-weight: 700 !important;
+    color: #58111A !important;
+  }
+
+  .tanishq-col__link--all:hover {
+    color: #8C6D37 !important;
+  }
+
+  /* 6. Featured Cards (Right Column) */
+  .tanishq-mega-col--featured {
+    grid-column: span 1 !important;
+  }
+
+  .tanishq-featured-card {
+    background: linear-gradient(145deg, #FAF4E8 0%, #F5ECDB 100%) !important;
+    border: 1px solid #DFBD76 !important;
+    border-radius: 12px !important;
+    padding: 22px 20px !important;
+    box-shadow: 0 4px 16px rgba(223, 189, 118, 0.15) !important;
+    box-sizing: border-box !important;
+  }
+
+  .tanishq-featured-card__badge {
+    display: inline-block !important;
+    background: #58111A !important;
+    color: #FAF8F5 !important;
+    font-size: 0.72rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.06em !important;
+    padding: 4px 10px !important;
+    border-radius: 100px !important;
+    margin-bottom: 12px !important;
+    line-height: 1.2 !important;
+  }
+
+  .tanishq-featured-card__title {
+    font-family: var(--font-heading--family, "Playfair Display", Georgia, serif) !important;
+    font-size: 1.12rem !important;
+    font-weight: 700 !important;
+    color: #161312 !important;
+    margin: 0 0 8px 0 !important;
+    line-height: 1.25 !important;
+  }
+
+  .tanishq-featured-card__desc {
+    font-size: 0.82rem !important;
+    color: #5A5148 !important;
+    line-height: 1.45 !important;
+    margin: 0 0 16px 0 !important;
+  }
+
+  .tanishq-featured-card__btn {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    background: #58111A !important;
+    color: #FAF8F5 !important;
+    padding: 10px 16px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 0.84rem !important;
+    text-decoration: none !important;
+    transition: background 0.2s ease, transform 0.15s ease !important;
+    border: none !important;
+    box-sizing: border-box !important;
+  }
+
+  .tanishq-featured-card__btn:hover {
+    background: #3B0910 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px) !important;
+  }
+
+  .tanishq-trust-markers {
+    margin-top: 14px !important;
+    padding-top: 12px !important;
+    border-top: 1px dashed #DFC18A !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+  }
+
+  .tanishq-trust-item {
+    font-size: 0.76rem !important;
+    color: #6D5C43 !important;
+    font-weight: 600 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* 7. Wedding Visual Grid Layout */
+  .tanishq-visual-grid {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 16px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .tanishq-visual-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  .tanishq-visual-card:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  .tanishq-visual-card__thumb {
+    width: 100% !important;
+    aspect-ratio: 16 / 11 !important;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
+    border: 1px solid #ECE5DA !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+  }
+
+  .tanishq-visual-card:hover .tanishq-visual-card__thumb {
+    border-color: #DFBD76 !important;
+    box-shadow: 0 8px 20px rgba(88, 17, 26, 0.12) !important;
+  }
+
+  .tanishq-visual-card__img-ph {
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .tanishq-visual-card__emoji {
+    font-size: 2.2rem !important;
+  }
+
+  .tanishq-visual-card__title {
+    font-family: var(--font-body--family, sans-serif) !important;
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    color: #161312 !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    transition: color 0.15s ease !important;
+  }
+
+  .tanishq-visual-card:hover .tanishq-visual-card__title {
+    color: #58111A !important;
+  }
+
+  .tanishq-wedding-sublinks {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid #ECE5DA !important;
+  }
+
+  .tanishq-wedding-sublinks__label {
+    font-size: 0.84rem !important;
+    font-weight: 700 !important;
+    color: #58111A !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .tanishq-sublink-pill {
+    font-size: 0.82rem !important;
+    color: #161312 !important;
+    text-decoration: none !important;
+    background-color: #FAF4E8 !important;
+    border: 1px solid #DFBD76 !important;
+    padding: 5px 14px !important;
+    border-radius: 100px !important;
+    transition: all 0.15s ease !important;
+    display: inline-block !important;
+  }
+
+  .tanishq-sublink-pill:hover {
+    background-color: #58111A !important;
+    color: #FAF8F5 !important;
+    border-color: #58111A !important;
+  }
+
+  .tanishq-sublink-pill--all {
+    background-color: #58111A !important;
+    color: #FAF8F5 !important;
+    border-color: #58111A !important;
+    font-weight: 600 !important;
+    margin-left: auto !important;
+  }
+
+  .tanishq-sublink-pill--all:hover {
+    background-color: #3b0910 !important;
+  }
+
+  /* 8. Gifting Grid Layout */
+  .tanishq-gifting-grid {
+    display: grid !important;
+    grid-template-columns: 2.2fr 1fr !important;
+    gap: 32px !important;
+    align-items: stretch !important;
+  }
+
+  .tanishq-gifting-left {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .tanishq-recipient-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .tanishq-recipient-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease !important;
+  }
+
+  .tanishq-recipient-card:hover {
+    transform: translateY(-4px) !important;
+  }
+
+  .tanishq-recipient-thumb {
+    width: 100% !important;
+    aspect-ratio: 16 / 11 !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
+    border: 1px solid #ECE5DA !important;
+    transition: border-color 0.2s ease !important;
+  }
+
+  .tanishq-recipient-card:hover .tanishq-recipient-thumb {
+    border-color: #DFBD76 !important;
+  }
+
+  .tanishq-recipient-emoji {
+    font-size: 2.8rem !important;
+  }
+
+  .tanishq-recipient-title {
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    color: #161312 !important;
+    margin-top: 10px !important;
+    transition: color 0.15s ease !important;
+  }
+
+  .tanishq-recipient-card:hover .tanishq-recipient-title {
+    color: #58111A !important;
+  }
+
+  .tanishq-celebrate-banner {
+    display: flex !important;
+    align-items: center !important;
+    gap: 18px !important;
+    background: #FAF4E8 !important;
+    border: 1px solid #DFBD76 !important;
+    border-radius: 12px !important;
+    padding: 16px 22px !important;
+  }
+
+  .tanishq-celebrate-banner__icon {
+    font-size: 2rem !important;
+    line-height: 1 !important;
+  }
+
+  .tanishq-celebrate-banner__text {
+    flex: 1 !important;
+  }
+
+  .tanishq-celebrate-banner__title {
+    font-family: var(--font-heading--family, serif) !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    color: #58111A !important;
+    margin: 0 0 4px 0 !important;
+  }
+
+  .tanishq-celebrate-banner__subtitle {
+    font-size: 0.82rem !important;
+    color: #5A5148 !important;
+    margin: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .tanishq-celebrate-banner__btn {
+    background-color: #58111A !important;
+    color: #FAF8F5 !important;
+    text-decoration: none !important;
+    font-size: 0.84rem !important;
+    font-weight: 600 !important;
+    padding: 9px 20px !important;
+    border-radius: 6px !important;
+    white-space: nowrap !important;
+    transition: background-color 0.15s ease !important;
+  }
+
+  .tanishq-celebrate-banner__btn:hover {
+    background-color: #3b0910 !important;
+    color: #FFFFFF !important;
+  }
+
+  .tanishq-gifting-right {
+    display: flex !important;
+  }
+
+  .tanishq-giftcard-box {
+    width: 100% !important;
+    background: linear-gradient(135deg, #EBE5DB 0%, #D8CEBE 100%) !important;
+    border-radius: 12px !important;
+    padding: 24px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    text-decoration: none !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid #C8BCAC !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    box-sizing: border-box !important;
+  }
+
+  .tanishq-giftcard-box:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 24px rgba(88, 17, 26, 0.15) !important;
+  }
+
+  .tanishq-giftcard-box__header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    font-family: var(--font-heading--family, serif) !important;
+    font-size: 1.3rem !important;
+    font-weight: 700 !important;
+    color: #58111A !important;
+  }
+
+  .tanishq-giftcard-box__ribbon {
+    position: absolute !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 45px !important;
+    width: 4px !important;
+    background-color: #A32A39 !important;
+    opacity: 0.8 !important;
+  }
+
+  .tanishq-giftcard-box__brand {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-top: 40px !important;
+  }
+
+  .tanishq-giftcard-logo-icon {
+    font-size: 2.2rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .tanishq-giftcard-brand-name {
+    font-family: var(--font-heading--family, serif) !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #58111A !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .tanishq-giftcard-sub {
+    font-size: 0.78rem !important;
+    color: #6A6054 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    margin-top: 4px !important;
+  }
+</style>

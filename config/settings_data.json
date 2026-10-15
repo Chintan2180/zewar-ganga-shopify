@@ -12,7 +12,7 @@
     "logo": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_28_56_AM.png",
     "logo_height": 90,
     "logo_height_mobile": 45,
-    "favicon": "shopify://shop_images/Vector_final.png",
+    "favicon": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_28_56_AM.png",
     "page_text_color": "{{ settings.color_palette.foreground }}",
     "type_body_font": "instrument_sans_n4",
     "type_subheading_font": "instrument_sans_n4",

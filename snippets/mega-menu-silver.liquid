@@ -1,0 +1,71 @@
+{%- doc -%}
+  Renders Tanishq-style 'Silvers' mega menu dropdown.
+{%- enddoc -%}
+
+<div class="tanishq-mega-menu section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
+  <div class="tanishq-mega-menu__container">
+    <div class="tanishq-mega-menu__columns" style="grid-template-columns: 1.3fr 1.3fr 1.3fr 1.3fr;">
+      
+      <!-- Column 1: Silver Jewellery -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">💍</span>
+          <span class="tanishq-col__heading-text">Silver Jewellery</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/silver-jewelry" class="tanishq-col__link tanishq-col__link--all">All Silver Jewellery</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry/Rings" class="tanishq-col__link">Rings &amp; Bands</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry/Payal-(or-Anklets)" class="tanishq-col__link">Pure Silver Payal (Anklets)</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry" class="tanishq-col__link">Silver Bracelets &amp; Kadas</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry" class="tanishq-col__link">Silver Chains &amp; Pendants</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2: Silver Bullion & Coins -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">🪙</span>
+          <span class="tanishq-col__heading-text">999 Fine Bullion</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/coins-bars/Silver" class="tanishq-col__link tanishq-col__link--all">All Silver Bullion</a></li>
+          <li><a href="{{ routes.collections_url }}/coins-bars/Silver" class="tanishq-col__link">Silver Coins (10g, 20g, 50g)</a></li>
+          <li><a href="{{ routes.collections_url }}/coins-bars/Silver" class="tanishq-col__link">Silver Bars (100g, 250g, 500g, 1kg)</a></li>
+          <li><a href="{{ routes.collections_url }}/coins-bars/Silver" class="tanishq-col__link">Lakshmi Ganesh Silver Coins</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Silver Utensils & Articles -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">🌸</span>
+          <span class="tanishq-col__heading-text">Utensils &amp; Pooja</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/silver-jewelry/Utensils-(or-Gifting)" class="tanishq-col__link tanishq-col__link--all">All Silver Articles</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry/Utensils-(or-Gifting)" class="tanishq-col__link">Pooja Thali &amp; Diya</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry/Utensils-(or-Gifting)" class="tanishq-col__link">Silver Utensils &amp; Bowls</a></li>
+          <li><a href="{{ routes.collections_url }}/silver-jewelry/Utensils-(or-Gifting)" class="tanishq-col__link">Silver Idols &amp; Frames</a></li>
+          <li><a href="{{ routes.collections_url }}/gifting" class="tanishq-col__link">Corporate &amp; Wedding Silver Gifts</a></li>
+        </ul>
+      </div>
+
+      <!-- Featured Silver Card -->
+      <div class="tanishq-mega-col tanishq-mega-col--featured">
+        <div class="tanishq-featured-card">
+          <div class="tanishq-featured-card__badge">Fine Silver 999</div>
+          <h4 class="tanishq-featured-card__title">Certified 92.5 &amp; 999 Silver</h4>
+          <p class="tanishq-featured-card__desc">From auspicious silver coins to traditional chandi payal, explore authentic hallmarked silver.</p>
+          <a href="{{ routes.collections_url }}/silver-jewelry" class="tanishq-featured-card__btn button button--primary">
+            Explore Silver
+          </a>
+          <div class="tanishq-trust-markers">
+            <span class="tanishq-trust-item">✦ 999 Fine Silver Guarantee</span>
+            <span class="tanishq-trust-item">✦ Authentic Hallmark Certification</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

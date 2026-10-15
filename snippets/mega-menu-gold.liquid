@@ -1,0 +1,75 @@
+{%- doc -%}
+  Renders Tanishq-style 'Gold' mega menu dropdown.
+{%- enddoc -%}
+
+<div class="tanishq-mega-menu section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
+  <div class="tanishq-mega-menu__container">
+    <div class="tanishq-mega-menu__columns" style="grid-template-columns: 1.2fr 1.6fr 1.4fr 1.3fr;">
+      
+      <!-- Men's Gold Column -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">👔</span>
+          <span class="tanishq-col__heading-text">Men's Gold</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link tanishq-col__link--all">All Men's Gold</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link">Chain</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="tanishq-col__link">Ring</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Bracelet</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Kadha</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="tanishq-col__link">Earpin</a></li>
+        </ul>
+      </div>
+
+      <!-- Women's Gold Column 1 -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">✨</span>
+          <span class="tanishq-col__heading-text">Women's Gold</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link tanishq-col__link--all">All Women's Gold</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Earrings" class="tanishq-col__link">Earrings</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="tanishq-col__link">Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Rings" class="tanishq-col__link">Engagement Rings</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link">Nose Pins</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Bangles</a></li>
+        </ul>
+      </div>
+
+      <!-- Women's Gold Column 2 -->
+      <div class="tanishq-mega-col">
+        <div class="tanishq-col__heading">
+          <span class="tanishq-col__heading-icon">👑</span>
+          <span class="tanishq-col__heading-text">Neckwear &amp; More</span>
+        </div>
+        <ul class="tanishq-col__list list-unstyled">
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link tanishq-col__link--all">Mangalsutra</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link">Chains</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-col__link">Necklaces</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry" class="tanishq-col__link">Pendants</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Kadas</a></li>
+          <li><a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-col__link">Bracelets</a></li>
+        </ul>
+      </div>
+
+      <!-- Featured Gold Bullion & Hallmarked Card -->
+      <div class="tanishq-mega-col tanishq-mega-col--featured">
+        <div class="tanishq-featured-card">
+          <div class="tanishq-featured-card__badge">BIS 916 Hallmark</div>
+          <h4 class="tanishq-featured-card__title">24K &amp; 22K Gold Bullion</h4>
+          <p class="tanishq-featured-card__desc">Auspicious Gold Coins in 1g, 2g, 5g, 10g with sacred Goddess Lakshmi &amp; Ganesh motifs.</p>
+          <a href="{{ routes.collections_url }}/coins-bars/Gold" class="tanishq-featured-card__btn button button--primary">
+            Explore Gold Coins
+          </a>
+          <div class="tanishq-trust-markers">
+            <span class="tanishq-trust-item">✦ 100% BIS 916 Hallmarked Purity</span>
+            <span class="tanishq-trust-item">✦ Tamper-Proof Assay Packaging</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
