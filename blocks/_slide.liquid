@@ -185,6 +185,43 @@
   slideshow-slide .slide__image-container--rounded {
     border-radius: var(--corner-radius, 0);
   }
+
+  /*
+   * Slideshow On-Media Legibility:
+   * Ensures heading and description text on slides with images or overlays
+   * are razor-sharp, crisp, and high-contrast against all background images.
+   */
+  .slideshow--content-on-media .slide__content,
+  .slide__content.background-transparent {
+    --color-foreground: #ffffff;
+    --color-foreground-rgb: 255 255 255;
+    color: #ffffff;
+  }
+
+  .slideshow--content-on-media .slide__content .text-block:not([style*="--color:"]),
+  .slide__content.background-transparent .text-block:not([style*="--color:"]) {
+    --color: #ffffff;
+    --color-rgb: 255 255 255;
+    color: #ffffff;
+  }
+
+  .slideshow--content-on-media .slide__content .text-block,
+  .slide__content.background-transparent .text-block {
+    color: var(--color, #ffffff);
+  }
+
+  .slideshow--content-on-media .slide__content .text-block :is(h1, h2, h3, h4, h5, h6),
+  .slide__content.background-transparent .text-block :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--color, #ffffff);
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
+    letter-spacing: 0.02em;
+  }
+
+  .slideshow--content-on-media .slide__content .text-block :is(p, span, li, a),
+  .slide__content.background-transparent .text-block :is(p, span, li, a) {
+    color: var(--color, rgba(255, 255, 255, 0.95));
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8), 0 1px 2px rgba(0, 0, 0, 0.95);
+  }
 {% endstylesheet %}
 
 {% schema %}

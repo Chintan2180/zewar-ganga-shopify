@@ -25,7 +25,7 @@
             "padding-block-end": 60,
             "gap": 16,
             "toggle_overlay": true,
-            "overlay_color": "#0000004d",
+            "overlay_color": "#00000073",
             "overlay_style": "gradient",
             "gradient_direction": "to top"
           },
@@ -34,13 +34,15 @@
               "type": "_heading",
               "settings": {
                 "text": "<h2>Timeless Heritage Masterpieces</h2>",
-                "type_preset": "h2"
+                "type_preset": "h2",
+                "text_color": "#ffffff"
               }
             },
             "subtext": {
               "type": "text",
               "settings": {
-                "text": "<p>Discover our royal bridal collection of 22K BIS 916 hallmarked Gold and certified Kundan &amp; Polki jewellery.</p>"
+                "text": "<p>Discover our royal bridal collection of 22K BIS 916 hallmarked Gold and certified Kundan &amp; Polki jewellery.</p>",
+                "text_color": "#ffffff"
               }
             },
             "button": {
@@ -71,7 +73,7 @@
             "padding-block-end": 60,
             "gap": 16,
             "toggle_overlay": true,
-            "overlay_color": "#0000004d",
+            "overlay_color": "#00000073",
             "overlay_style": "gradient",
             "gradient_direction": "to top"
           },
@@ -80,13 +82,15 @@
               "type": "_heading",
               "settings": {
                 "text": "<h2>Pure 24K Gold &amp; 999 Fine Silver Bullion</h2>",
-                "type_preset": "h2"
+                "type_preset": "h2",
+                "text_color": "#ffffff"
               }
             },
             "subtext": {
               "type": "text",
               "settings": {
-                "text": "<p>Auspicious Gold Coins &amp; Silver Bars featuring sacred Lakshmi &amp; Ganesh motifs for investment &amp; gifting.</p>"
+                "text": "<p>Auspicious Gold Coins &amp; Silver Bars featuring sacred Lakshmi &amp; Ganesh motifs for investment &amp; gifting.</p>",
+                "text_color": "#ffffff"
               }
             },
             "button": {
@@ -117,7 +121,7 @@
             "padding-block-end": 60,
             "gap": 16,
             "toggle_overlay": true,
-            "overlay_color": "#0000004d",
+            "overlay_color": "#00000073",
             "overlay_style": "gradient",
             "gradient_direction": "to top"
           },
@@ -126,13 +130,15 @@
               "type": "_heading",
               "settings": {
                 "text": "<h2>Everyday Elegance &amp; Solitaires</h2>",
-                "type_preset": "h2"
+                "type_preset": "h2",
+                "text_color": "#ffffff"
               }
             },
             "subtext": {
               "type": "text",
               "settings": {
-                "text": "<p>Contemporary lightweight gold rings, sleek daily wear bracelets, and solitaire jewellery for every celebration.</p>"
+                "text": "<p>Contemporary lightweight gold rings, sleek daily wear bracelets, and solitaire jewellery for every celebration.</p>",
+                "text_color": "#ffffff"
               }
             },
             "button": {
@@ -163,7 +169,7 @@
             "padding-block-end": 60,
             "gap": 16,
             "toggle_overlay": true,
-            "overlay_color": "#0000004d",
+            "overlay_color": "#00000073",
             "overlay_style": "gradient",
             "gradient_direction": "to top"
           },
@@ -172,13 +178,15 @@
               "type": "_heading",
               "settings": {
                 "text": "<h2>Artisanal Silver &amp; Festive Treasures</h2>",
-                "type_preset": "h2"
+                "type_preset": "h2",
+                "text_color": "#ffffff"
               }
             },
             "subtext": {
               "type": "text",
               "settings": {
-                "text": "<p>Authentic 92.5 Sterling Silver Payals, handcrafted puja utensils, and ceremonial gift articles.</p>"
+                "text": "<p>Authentic 92.5 Sterling Silver Payals, handcrafted puja utensils, and ceremonial gift articles.</p>",
+                "text_color": "#ffffff"
               }
             },
             "button": {

@@ -1,39 +1,54 @@
 {%- doc -%}
-  Renders Tanishq-style 'Wedding' (Rivaah) mega menu with visual cards matching Tanishq layout.
+  Renders Tanishq-style 'Wedding' (Rivaah) mega menu matching Tanishq layout with high-resolution bridal imagery.
 {%- enddoc -%}
 
 <div class="tanishq-mega-menu tanishq-mega-menu--visual section section--full-width-margin section--{{ section.settings.section_width | default: 'page-width' }}">
   <div class="tanishq-mega-menu__container">
     
-    <!-- Top Row of Visual Category Cards (Matching Tanishq Screenshot) -->
+    <!-- 6-Column Grid Matching Tanishq Screenshot -->
     <div class="tanishq-visual-grid">
       
       <!-- Card 1: All Rivaah -->
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-visual-card">
+      <a href="{{ routes.collections_url }}/wedding-collection" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #fdf4e7 0%, #f3dec2 100%);">
-            <span class="tanishq-visual-card__emoji">👑</span>
-          </div>
+          <img
+            src="{{ 'wedding-all-rivaah.jpg' | asset_url }}"
+            alt="All Rivaah Wedding Jewellery"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
         <span class="tanishq-visual-card__title">All Rivaah</span>
       </a>
 
       <!-- Card 2: Wedding Choker -->
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-visual-card">
+      <a href="{{ routes.collections_url }}/wedding-collection" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #fcf0de 0%, #ecd0a6 100%);">
-            <span class="tanishq-visual-card__emoji">💛</span>
-          </div>
+          <img
+            src="{{ 'wedding-choker.jpg' | asset_url }}"
+            alt="Wedding Choker"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
         <span class="tanishq-visual-card__title">Wedding Choker</span>
       </a>
 
       <!-- Card 3: Wedding Haram -->
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-visual-card">
+      <a href="{{ routes.collections_url }}/wedding-collection" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #faebd7 0%, #dfb882 100%);">
-            <span class="tanishq-visual-card__emoji">✨</span>
-          </div>
+          <img
+            src="{{ 'wedding-haram.jpg' | asset_url }}"
+            alt="Wedding Haram"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
         <span class="tanishq-visual-card__title">Wedding Haram</span>
       </a>
@@ -41,153 +56,135 @@
       <!-- Card 4: Wedding Bangles -->
       <a href="{{ routes.collections_url }}/gold-jewelry/Bangles-(or-Bracelets)" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #fef8eb 0%, #e8cfa1 100%);">
-            <span class="tanishq-visual-card__emoji">💫</span>
-          </div>
+          <img
+            src="{{ 'wedding-bangles.jpg' | asset_url }}"
+            alt="Wedding Bangles"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
         <span class="tanishq-visual-card__title">Wedding Bangles</span>
       </a>
 
       <!-- Card 5: Wedding Diamond -->
-      <a href="{{ routes.all_products_collection_url }}" class="tanishq-visual-card">
+      <a href="{{ routes.collections_url }}/diamonds" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #f4f8fb 0%, #d8e5ee 100%);">
-            <span class="tanishq-visual-card__emoji">💎</span>
-          </div>
+          <img
+            src="{{ 'wedding-diamond.jpg' | asset_url }}"
+            alt="Wedding Diamond"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
-        <span class="tanishq-visual-card__title">Wedding Diamonds &amp; Sets</span>
+        <span class="tanishq-visual-card__title">Wedding Diamond</span>
       </a>
 
       <!-- Card 6: Wedding Mangalsutra -->
       <a href="{{ routes.collections_url }}/gold-jewelry/Necklace-(or-Chain)" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #faf0e6 0%, #e6caa3 100%);">
-            <span class="tanishq-visual-card__emoji">📿</span>
-          </div>
+          <img
+            src="{{ 'wedding-mangalsutra.jpg' | asset_url }}"
+            alt="Wedding Mangalsutra"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
         <span class="tanishq-visual-card__title">Wedding Mangalsutra</span>
       </a>
 
-      <!-- Card 7: Accessories -->
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-visual-card">
+      <!-- Card 7: Accessories (Row 2, Column 1) -->
+      <a href="{{ routes.collections_url }}/wedding-collection" class="tanishq-visual-card">
         <div class="tanishq-visual-card__thumb">
-          <div class="tanishq-visual-card__img-ph" style="background: linear-gradient(135deg, #fdf5e6 0%, #e4c293 100%);">
-            <span class="tanishq-visual-card__emoji">🌸</span>
-          </div>
+          <img
+            src="{{ 'wedding-accessories.jpg' | asset_url }}"
+            alt="Wedding Accessories"
+            class="tanishq-visual-card__img"
+            loading="lazy"
+            width="360"
+            height="360"
+          >
         </div>
         <span class="tanishq-visual-card__title">Accessories</span>
       </a>
 
     </div>
 
-    <!-- Subcategories Links Row -->
-    <div class="tanishq-wedding-sublinks">
-      <span class="tanishq-wedding-sublinks__label">Bridal Essentials:</span>
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-sublink-pill">Maang Tika</a>
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-sublink-pill">Nathni (Nose Ring)</a>
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-sublink-pill">Hathphool</a>
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-sublink-pill">Kamarbandh</a>
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-sublink-pill">Bridal Bangles</a>
-      <a href="{{ routes.collections_url }}/wedding-jewelry" class="tanishq-sublink-pill tanishq-sublink-pill--all">Explore Rivaah Collection ➔</a>
-    </div>
-
   </div>
 </div>
 
 <style>
-  .tanishq-visual-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 16px;
-    margin-bottom: 20px;
+  .tanishq-mega-menu--visual .tanishq-visual-grid {
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 20px 24px !important;
+    width: 100% !important;
   }
-  .tanishq-visual-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.2s ease;
+
+  .tanishq-mega-menu--visual .tanishq-visual-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    transition: transform 0.25s ease !important;
   }
-  .tanishq-visual-card:hover {
-    transform: translateY(-4px);
+
+  .tanishq-mega-menu--visual .tanishq-visual-card:hover {
+    transform: translateY(-4px) !important;
   }
-  .tanishq-visual-card__thumb {
-    width: 100%;
-    aspect-ratio: 16 / 11;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    border: 1px solid #ECE5DA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .tanishq-mega-menu--visual .tanishq-visual-card__thumb {
+    width: 100% !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid #ECE5DA !important;
+    background: #FAF8F5 !important;
   }
-  .tanishq-visual-card__img-ph {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .tanishq-mega-menu--visual .tanishq-visual-card__img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.35s ease !important;
   }
-  .tanishq-visual-card__emoji {
-    font-size: 2.2rem;
+
+  .tanishq-mega-menu--visual .tanishq-visual-card:hover .tanishq-visual-card__img {
+    transform: scale(1.06) !important;
   }
-  .tanishq-visual-card__title {
-    font-family: var(--font-body--family, sans-serif);
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: #161312;
-    margin-top: 10px;
-    text-align: center;
-    line-height: 1.3;
-    transition: color 0.15s ease;
+
+  .tanishq-mega-menu--visual .tanishq-visual-card__title {
+    font-family: var(--font-body--family, sans-serif) !important;
+    font-size: 0.92rem !important;
+    font-weight: 500 !important;
+    color: #161312 !important;
+    margin-top: 10px !important;
+    text-align: center !important;
+    line-height: 1.3 !important;
+    transition: color 0.15s ease !important;
   }
-  .tanishq-visual-card:hover .tanishq-visual-card__title {
-    color: #58111A;
+
+  .tanishq-mega-menu--visual .tanishq-visual-card:hover .tanishq-visual-card__title {
+    color: #58111A !important;
+    font-weight: 600 !important;
   }
-  .tanishq-wedding-sublinks {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-top: 16px;
-    border-top: 1px solid #ECE5DA;
-  }
-  .tanishq-wedding-sublinks__label {
-    font-size: 0.84rem;
-    font-weight: 700;
-    color: #58111A;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .tanishq-sublink-pill {
-    font-size: 0.82rem;
-    color: #161312;
-    text-decoration: none;
-    background-color: #FAF4E8;
-    border: 1px solid #DFBD76;
-    padding: 5px 12px;
-    border-radius: 100px;
-    transition: all 0.15s ease;
-  }
-  .tanishq-sublink-pill:hover {
-    background-color: #58111A;
-    color: #FAF8F5;
-    border-color: #58111A;
-  }
-  .tanishq-sublink-pill--all {
-    background-color: #58111A;
-    color: #FAF8F5;
-    border-color: #58111A;
-    font-weight: 600;
-    margin-left: auto;
-  }
-  .tanishq-sublink-pill--all:hover {
-    background-color: #3b0910;
-  }
+
   @media screen and (max-width: 1100px) {
-    .tanishq-visual-grid {
-      grid-template-columns: repeat(4, 1fr);
+    .tanishq-mega-menu--visual .tanishq-visual-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .tanishq-mega-menu--visual .tanishq-visual-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
     }
   }
 </style>
