@@ -50,7 +50,6 @@
             <li><a href="{{ routes.all_products_collection_url }}" class="menu-list__item">Diamonds</a></li>
             <li><a href="{{ routes.all_products_collection_url }}" class="menu-list__item">Gemstone</a></li>
             <li><a href="{{ routes.collections_url }}/wedding-collection" class="menu-list__item">Wedding</a></li>
-            <li><a href="{{ routes.collections_url }}/gifting" class="menu-list__item">Gifting</a></li>
             <li><a href="/pages/showroom" target="_blank" rel="noopener noreferrer" class="menu-list__item" style="font-weight: 700; color: #58111A;">Our Store ↗</a></li>
           </ul>
         </div>
@@ -272,38 +271,7 @@
         </div>
       </li>
 
-      <!-- 7. Gifting -->
-      <li
-        role="presentation"
-        class="menu-list__list-item"
-        on:focus="/activate"
-        on:blur="/deactivate"
-        on:pointerenter="/activate"
-        on:pointerleave="/deactivate"
-      >
-        <a
-          href="{{ routes.collections_url }}/gifting"
-          data-skip-node-update="true"
-          class="menu-list__link"
-          aria-controls="submenu-gifting"
-          aria-haspopup="true"
-          aria-expanded="false"
-          ref="menuitem"
-        >
-          <span class="menu-list__link-title">Gifting</span>
-        </a>
-        <div class="menu-list__submenu{{ background_color_classes }}" ref="submenu[]">
-          <div
-            id="submenu-gifting"
-            class="menu-list__submenu-inner"
-            style="{% render 'submenu-font-styles', settings: block_settings %}"
-          >
-            {% render 'mega-menu-gifting', section: section %}
-          </div>
-        </div>
-      </li>
-
-      <!-- 8. Our Store (Opens pages/showroom in a new tab) -->
+      <!-- 7. Our Store (Opens pages/showroom in a new tab) -->
       <li
         role="presentation"
         class="menu-list__list-item"
